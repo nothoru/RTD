@@ -97,7 +97,9 @@ function checkWin() {
   let currentOrder = Array.from(tiles).map((tile) => tile.src.split("/").pop());
 
   if (currentOrder.join() === winningOrder.join()) {
-    document.querySelector(".prize").textContent =
-      "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    let prizeLink = document.querySelector(".prize");
+    prizeLink.textContent = "Congratulations! Click here for your prize!";
+    prizeLink.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    prizeLink.target = "_blank";
   }
 }
