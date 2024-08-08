@@ -25,7 +25,7 @@ window.onload = function () {
       //img
       let tile = document.createElement("img");
       tile.id = r.toString() + "-" + c.toString();
-      tile.src = imgOrder.shift() + ".png";
+      tile.src = imgOrder.shift() + ".jpg";
 
       tile.addEventListener("dragstart", dragStart);
       tile.addEventListener("dragover", dragOver);
@@ -58,7 +58,7 @@ function dragDrop() {
 }
 
 function dragEnd() {
-  if (!otherTile.src.includes("3.png")) {
+  if (!otherTile.src.includes("3.jpg")) {
     return;
   }
 
